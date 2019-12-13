@@ -11,3 +11,46 @@ canvas.width = width;
 canvas.height = height;
 
 // hier kun je op de canvas tekenen
+context.beginPath()
+context.fillStyle = "red";
+context.moveTo(300,100);
+context.lineTo(200,300);
+context.lineTo(600,400);
+context.lineTo(700,200);
+context.closePath();
+context.stroke();
+context.fill()
+
+context.beginPath()
+context.fillStyle = "grey";
+context.moveTo(800,300)
+context.lineTo(600,400)
+context.lineTo(700,200)
+context.lineTo(800,300)
+context.closePath();
+context.stroke();
+context.fill()
+
+context.beginPath()
+context.fillStyle = "grey";
+context.moveTo(200,300)
+context.lineTo(200,500)
+context.lineTo(600,600)
+context.lineTo(600,400)
+context.closePath();
+context.stroke();
+context.fill()
+
+
+context.beginPath()
+context.fillStyle = "grey";
+context.moveTo(600,400)
+context.lineTo(800,300)
+context.lineTo(800,500)
+context.lineTo(600,600)
+context.closePath();
+context.stroke();
+context.fill()
+
+
+
