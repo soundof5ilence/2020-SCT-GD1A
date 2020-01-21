@@ -1,0 +1,50 @@
+// maak een variabele voor de canvas
+const canvas = document.getElementById('canvas');
+
+// leg een 2d-context over de canvas
+const context = canvas.getContext('2d');
+
+//maak de canvas schermvullend
+const width = window.innerWidth;
+const height = window.innerHeight;
+canvas.width = width;
+canvas.height = height;
+
+let circleobj = {};
+let color = ["red", "orange", "green", "blue", "yellow"];
+let circles = [];
+
+// for(let i = 0; i < 10; 1++){
+var maxWidth = Math.floor(Math.random() * width);
+circleobj.x = maxWidth;
+var maxHeight = Math.floor(Math.random() * height);
+circleobj.y = maxHeight;
+
+let j = Math.floor(Math.random() * color.length);
+circleobj.color = color[j]
+// circles.push(circleobj);
+// }
+
+circleobj.draw = function()
+{
+    context.beginPath();
+    context.moveTo(circleobj.x, circleobj.y);
+    context.fillStyle = circleobj.color;
+    context.arc(circleobj.x,circleobj.y,100,0,2*Math.PI);
+    context.closePath();
+    context.fill();
+    context.stroke();
+}
+
+circleobj.draw();
+
+function loop()
+{
+    for(let j = 0;)
+}
+
+setInterval(loop, 20);
+
+
+
+------------------------
